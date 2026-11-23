@@ -1,0 +1,33 @@
+{
+  "id": "deki-clockworkpi-boards",
+  "displayName": "ClockworkPi Boards",
+  "description": "Build targets for ClockworkPi devices: the PicoCalc with a Raspberry Pi Pico",
+  "minEngine": "0.40.0",
+  "buildDefine": "DEKI_PACKAGE_CLOCKWORKPI",
+  "platformRequires": [
+    "pico"
+  ],
+  "requires": [
+    "deki-raspberrypi-integration",
+    "deki-display",
+    "deki-input",
+    "deki-i2c",
+    "deki-spi",
+    "deki-gpio",
+    "deki-sdcard",
+    "deki-rendering"
+  ],
+  "features": [
+    {
+      "id": "picocalc",
+      "displayName": "PicoCalc keyboard, backlights and battery",
+      "defaultEnabled": true,
+      "componentTypes": [
+        "PicoCalcSetup"
+      ]
+    }
+  ],
+  "dependencies": {
+    "pico": []
+  }
+}
